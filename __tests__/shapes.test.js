@@ -57,3 +57,24 @@ describe("square", () => {
     );
   });
 });
+
+describe("triangle", () => {
+  // arrange
+  const triangleClass = new Triangle();
+  // act
+  // assert
+  it("should be an instance of the Shape class", () => {
+    expect(triangleClass).toBeInstanceOf(Shape);
+  });
+  it("should have a render method", () => {
+    expect(triangleClass).toHaveProperty("render");
+  });
+  it("should have a render method that returns a triangle svg file", () => {
+    expect(triangleClass.render()).toEqual(
+      `
+      <svg width="100" height="100">
+          <polygon points="50,0 0,100 100,100" fill="${this.color} />
+      </svg>`
+    );
+  });
+});
