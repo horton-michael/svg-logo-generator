@@ -31,6 +31,7 @@ describe("circle", () => {
     expect(circleClass.render()).toEqual(
       `
       <svg width="300" height="200">
+      <text text=anchor="middle" x=50% y=50% fill=${this.textColor}>${this.text}</text>
         <circle cx="50" cy="50" r="40" fill=${this.color}/>
       </svg>`
     );
