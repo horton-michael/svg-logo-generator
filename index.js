@@ -39,3 +39,27 @@ function writeToFile(fileName, data) {
     console.log("Generated logo.svg");
   });
 }
+
+function init() {
+  inquirer.prompt(questions).then((response) => {
+    let shape;
+    switch (response.shape) {
+      case "Circle":
+        shape = new Circle(response.text, response.textColor, response.bgColor);
+        break;
+      case "Square":
+        shape = new Square(response.text, response.textColor, response.bgColor);
+        break;
+      case "Triangle":
+        shape = new Triangle(
+          response.text,
+          response.textColor,
+          response.bgColor
+        );
+        break;
+    }
+    writeToFile("logo.svg", shape.render());
+  });
+}
+
+init();
