@@ -12,7 +12,7 @@ describe("shapes", () => {
     expect(shapeClass).toHaveProperty("textColor");
   });
   it("have a background color property", () => {
-    expect(shapeClass).toHaveProperty("bgColor");
+    expect(shapeClass).toHaveProperty("shapeColor");
   });
 });
 
@@ -30,10 +30,10 @@ describe("circle", () => {
   it("should have a render method that returns a circle svg file", () => {
     expect(circleClass.render()).toEqual(
       `
-      <svg width="300" height="200">
-      <text text=anchor="middle" x=50% y=50% fill=${this.textColor}>${this.text}</text>
-        <circle cx="50" cy="50" r="40" fill=${this.color}/>
-      </svg>`
+    <svg width="300" height="200">
+    <circle cx="50%" cy="50%" r="50" fill="${this.shapeColor}" />
+    <text font-family="serif" font-size="32px" text-anchor="middle" x=50% y=55% fill="${this.textColor}">${this.text}</text>
+  </svg>`
     );
   });
 });
