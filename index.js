@@ -40,7 +40,7 @@ function writeToFile(fileName, data) {
   });
 }
 
-function init() {
+function createShape() {
   inquirer.prompt(questions).then((response) => {
     let shape;
     switch (response.shape) {
@@ -62,4 +62,4 @@ function init() {
   });
 }
 
-init();
+createShape();

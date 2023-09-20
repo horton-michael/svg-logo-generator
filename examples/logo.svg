@@ -1,0 +1,5 @@
+
+    <svg width="300" height="200">
+    <circle cx="50%" cy="50%" r="50" fill="ORANGE" />
+    <text font-family="serif" font-size="32px" text-anchor="middle" x=50% y=55% fill="BLACK">MJH</text>
+  </svg>
