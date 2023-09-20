@@ -1,4 +1,4 @@
-const { Shape, Circle, Square } = require("../lib/shapes.js");
+const { Shape, Circle, Square, Triangle } = require("../lib/shapes.js");
 
 describe("shapes", () => {
   // arrange
@@ -30,8 +30,8 @@ describe("circle", () => {
   it("should have a render method that returns a circle svg file", () => {
     expect(circleClass.render()).toEqual(
       `
-      <svg width="100" height="100">
-          <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="${this.color}" />
+      <svg width="300" height="200">
+        <circle cx="50" cy="50" r="40" fill=${this.color}/>
       </svg>`
     );
   });
@@ -51,8 +51,8 @@ describe("square", () => {
   it("should have a render method that returns a square svg file", () => {
     expect(squareClass.render()).toEqual(
       `
-      <svg width="100" height="100">
-          <rect width="100" height="100" fill="${this.color} />
+      <svg width="300" height="200">
+          <rect width="100" height="100" fill="${this.color}"/>
       </svg>`
     );
   });
@@ -72,8 +72,8 @@ describe("triangle", () => {
   it("should have a render method that returns a triangle svg file", () => {
     expect(triangleClass.render()).toEqual(
       `
-      <svg width="100" height="100">
-          <polygon points="50,0 0,100 100,100" fill="${this.color} />
+      <svg width="300" height="200">
+        <polygon points="50,0 0,100 100,100" fill="${this.color}"/>
       </svg>`
     );
   });
